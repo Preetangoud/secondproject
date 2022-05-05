@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
-<body>
+<body class="">
+    
     <div class="container">
         <div class="header">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/OP_LU_Reg_1L_RGB_red_copy-01.svg/880px-OP_LU_Reg_1L_RGB_red_copy-01.svg.png"
@@ -53,8 +55,10 @@
                     <i class="fa-solid fa-bag-shopping"></i>
                 </ul>
             </div>
+            
             <div class="text">
-                <h3>The all-new Oneplus 9 Pro</h3>
+                <button class="theme" onclick="changeMode()">Change Mode</button>
+                <h3>The all-new OnePlus 9 Pro</h3>
                 <p>Save extra $50.00 in exchange bonus </p>
                 <h3>Now at $900.00</h3>
                 <p>*Inc. bank discount</p>
@@ -62,42 +66,51 @@
                 <button class="btn">Learn more</button>
             </div>
         </div>
+        <div id="coupon">
+            <button class="crossmark" onclick="closeCoupon()"> &times;</button>
+            <center>
+                
+                <h3>Discount</h3>
+                <h2>20% OFF <br> First order</h2>
+                <h3>Code:ONEFIRST</h3>
+            </center>
+        </div>
     </div>
 
     <div id="second-container">
         <div class="box">
             <div class="box-image">
-                <img src="https://m.media-amazon.com/images/I/61+Q6Rh3OQL._SL1500_.jpg" alt="TV">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/Pickle-60x60.png" alt="TV">
                 <h5>Nord Series</h5>
             </div>
         </div>
         <div class="box">
             <div class="box-image" id="series">
-                <img src="https://m.media-amazon.com/images/I/61LvUvbZGlL._SL1500_.jpg" alt="image">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/Oscar-blue-60x60.png" alt="image">
                 <h5>One Plus 9 Series</h5>
             </div>
         </div>
         <div class="box">
             <div class="box-image">
-                <img src="https://m.media-amazon.com/images/I/71vZypjNkPS._SL1500_.jpg" alt="image">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/TV.png" alt="image">
                 <h5>TV</h5>
             </div>
         </div>
         <div class="box">
             <div class="box-image">
-                <img src="https://m.media-amazon.com/images/I/61jBNPjMZ1L._SL1500_.jpg" alt="watches">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/Wearable.png" alt="watches">
                 <h5>Watches</h5>
             </div>
         </div>
         <div class="box">
             <div class="box-image">
-                <img src="https://m.media-amazon.com/images/I/51jJs-kCh6S._SL1500_.jpg" alt="earpods">
+                <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/Cello-60x60.png" alt="earpods">
                 <h5>Earpods</h5>
             </div>
         </div>
         <div class="box">
             <div class="box-image">
-                <img src="https://images.fonearena.com/blog/wp-content/uploads/2020/10/OnePlus-18W-Power-Bank.jpg"
+                <img src="	https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/nav-render/Power-Cables.png"
                     alt="power">
                 <h5>Power & Cables</h5>
             </div>
@@ -117,7 +130,7 @@
                 alt="TV">
         </div>
         <div class="all-items">
-            <img src="https://smrtechno.com/wp-content/uploads/2022/01/OnePlus-9RT-2.jpg" alt="9R">
+            <img src="https://oasis.opstatics.com/content/dam/oasis/page/homepage/new-in/carousel-tile/9Pro-L.jpg" alt="9R">
         </div>
     </div>
     <div id="container-4">
@@ -125,7 +138,7 @@
             <h4>Oneplus Bullets Wireless Z Series</h4>
             <p>From $ 100.00 <strike>$120.00 </strike></p>
             <button class="btn">Buy Now</button>
-            </div>
+        </div>
         <div class="watch-block">
             <h4>OnePlus Watch</h4>
             <h6>*Incl. Bank discount</h6>
@@ -162,15 +175,18 @@
         </div>
     </div>
     <div id="cont">
-            <h1>Always be the First to Know.</h1>
-            <h5>Signup for you newsletter</h5>
-            <form>
-                <label for="Email"></label>
-                <input type="text" id="Email" name="Email" placeholder="Email Address">
-                </form>
-                <h6>Subscribe to receive marketing information</h6>
+        <h1>Always be the First to Know.</h1>
+        <h5>Signup for you newsletter</h5>
+        <form>
+            <label for="Email"></label>
+            <input type="text" id="Email" name="Email" placeholder="Email Address">
+        </form>
+        <h6>Subscribe to receive marketing information</h6>
     </div>
-
+<script>
+    window.onload = loadCoupon()
+    
+</script>
 </body>
 <footer>
     <div class="container-7">
@@ -196,17 +212,17 @@
         </div>
         <div class="col">
             <p>Support</p>
-           <p><a href="">Shopping FAQs</a></p>
+            <p><a href="">Shopping FAQs</a></p>
             <p><a href="">User Manuals</a></p>
             <p><a href="">Service Centres</a></p>
             <p><a href="">Affiliate Program</a></p>
             <p><a href="">Repair Service</a></p>
             <p><a href="">Repair Pricing</a></p>
             <p><a href="">Software Update</a></p>
-        
+
         </div>
         <div class="col">
-             <p>Explore</p>
+            <p>Explore</p>
             <p><a href="">About OnePlus</a></p>
             <p><a href="">Community</a></p>
             <p><a href="">Find a Store</a></p>
@@ -222,7 +238,7 @@
             <p><a href="">Welcome Gift</a></p>
             <h3>&copy Preetan 2022</h3>
         </div>
-        
+
     </div>
 </footer>
 
